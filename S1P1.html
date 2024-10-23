@@ -45,83 +45,8 @@ ESERCIZIO 12) Crea un selettore per selezionare il secondo link del footer
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+        <link rel="stylesheet" href="style.css">
 
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-
-        /* ESERCIZIO 1) Crea un selettore per selezionare l'<h1> nella sezione "hero", ovvero nel jumbotron */
-        .jumbotron h1 {
-            background-color: yellow;
-        }
-
-        /* ESERCIZIO 2) Crea un selettore per selezionare tutti i figli dell'elemento navbar */
-        .nav {
-            background-color: yellow;
-        }
-
-        /* ESERCIZIO 3) Crea un selettore per selezionare il link "Continua a leggere" del jumbotron */
-        .font-weight-bold {
-            background-color: yellow;
-        }
-
-        /* ESERCIZIO 4) Crea un selettore per selezionare il primo blog post */
-        .blog-main .blog-post:first-of-type {
-            background-color: yellow;
-        }
-
-        /* ESERCIZIO 5) Crea un selettore per selezionare l'<hr> del primo blog post e colorarlo di rosso */
-        .blog-main hr:first-of-type {
-            background-color: red;
-        }
-
-        /* ESERCIZIO 6) Crea un selettore per selezionare i link pari della navbar */
-        .nav span:nth-of-type(even) {
-            border: solid 1px red;
-        }
-
-        /* ESERCIZIO 7) Crea un selettore per selezionare tutti gli <li> della prima "ordered-list" della sidebar ("Archivio") */
-        .list-unstyled.mb-0 {
-            background-color: yellow;
-        }
-
-        /* ESERCIZIO 8) Crea un selettore per selezionare l'autore del secondo blog post */
-        .blog-main .blog-post:nth-of-type(2) .blog-post-meta a {
-            background-color: orange;
-        }
-
-        /* ESERCIZIO 9) Crea un selettore per selezionare il secondo <li> della lista del terzo blog post */
-        .blog-main .blog-post:nth-of-type(3) ul li:nth-child(2) {
-            background-color: orange;
-        }
-
-        /* ESERCIZIO 10) Crea un selettore per selezionare il link "Torna su" che trovi a fondo pagina nell'angolo in basso a destra */
-        footer+a {
-            background-color: pink;
-        }
-
-        /* ESERCIZIO 11) Crea un selettore per selezionare il bottone "Nuovi" che trovi in basso */
-        .blog-pagination a:nth-child(2) {
-            background-color: purple;
-        }
-
-        /* ESERCIZIO 12) Crea un selettore per selezionare il secondo link del footer */
-        footer a:nth-child(2) {
-            border: solid 3px red;
-        }
-    </style>
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet" />
 </head>
 
@@ -449,46 +374,7 @@ ESERCIZIO 12) Crea un selettore per selezionare il secondo link del footer
     </footer>
 
     <a href="#" class="float-right mb-3 mr-3">Torna su</a>
-    <script>
-        /* JS Exercises should go here */
-
-        // EXTRA Crea con JavaScript la funzionalità per rimuovere il link "twitter" sotto alla sezione "Altro" nell'elemento "aside". Deve avvenire al caricamento della pagina, automticamente.
-        document.addEventListener('DOMContentLoaded', function () {
-            document.querySelector(".blog-sidebar .p-4:nth-of-type(3) li:nth-child(2)").style.display = "none"
-        })
-
-        // EXTRA Crea con JavaScript la funzionalità per rimuovere il corrispondente elemento padre dal DOM cliccando sul link "Continua a leggere".
-        rimuoviPadre = document.querySelector('.font-weight-bold')
-        rimuoviPadre.addEventListener('click', function () {
-            document.querySelector('.px-0').style.display = 'none'
-        })
-
-        // EXTRA Crea con JavaScript la funzionalità per creare un alert col nome dell'autore ogni volta che il cursore passa sopra l'autore del post.
-        let autori = document.querySelectorAll('.blog-main .blog-post .blog-post-meta a')
-
-        for (let i = 0; i < autori.length; i++) {
-            autori[i].addEventListener('mouseover', function () {
-                alert(autori[i].textContent)
-            })
-        }
-
-        // aut1 = document.querySelector('.blog-main .blog-post:nth-of-type(1) .blog-post-meta a')
-        // aut2 = document.querySelector('.blog-main .blog-post:nth-of-type(2) .blog-post-meta a')
-        // aut3 = document.querySelector('.blog-main .blog-post:nth-of-type(3) .blog-post-meta a')
-
-        // aut1.addEventListener('mouseover', function () {
-        //     alert(aut1.textContent)
-        // })
-        // aut2.addEventListener('mouseover', function () {
-        //     alert(aut2.textContent)
-        // })
-        // aut3.addEventListener('mouseover', function () {
-        //     alert(aut3.textContent)
-        // })
-
-
-
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
